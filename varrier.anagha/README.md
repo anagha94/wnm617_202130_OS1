@@ -1,8 +1,4 @@
-# Anagha Varrier
+##Relevant Links
 
-## Animal Tracker
-
-### Important Links
-
-- http://anaghavarrier.com/
-- http://anaghavarrier.com/aau/wnm617/varrier.anagha
+-http://anaghavarrier.com/
+-http://anaghavarrier.com/aau/wnm608/css/styleguide.css
