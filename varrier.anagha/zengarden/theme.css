@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nanum+Pen+Script&display=swap');
+
+
+body {
+  margin: 20px auto;
+  font-family: 'Lato';
+  background:#000;
+  color:#fff;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+h1, h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+h2 {
+  margin-bottom: 2em;
+}
+
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: 2rem;
+  font-family: 'Nanum Pen Script';
+  font-size: 2rem;
+}
+
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  width:40em;
+  padding:3em;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  transform: rotate(-6deg);
+  transition: transform .15s linear;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left:7em;
+}
+
+p[role=contentinfo] {
+
+  width:50em;
+  padding:2em;
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+
+}
+
+p[role=contentinfo]:hover {
+
+  width:20em;
+  padding:2em;
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+  transform: scale(1.25);
+  position:relative;
+  z-index:5;
+
+}
+
+.summary:hover,
+.preamble:hover,
+.explanation:hover,
+.participation:hover,
+.benefits:hover,
+.requirements:hover,
+.summary:focus,
+.preamble:focus,
+.explanation:focus,
+.participation:focus,
+.benefits:focus,
+.requirements:focus
+
+{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  transform: scale(1.25);
+  position:relative;
+  z-index:5;
+  overflow: visible;
+}
+
+.summary {
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+.preamble{
+  transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+.explanation{
+  transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+
+.participation {
+  transform:rotate(-3deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+.benefits{
+  transform:rotate(5deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+.requirements{
+  transform:rotate(-4deg);
+  position:relative;
+  top:-10px;
+}
+
+
+footer a {
+
+  color: inherit;
+  text-decoration: none;
+  padding: 5em;
+  font-size: 20px;
+
+}
+
+footer {
+  margin-top: 300px;
+  margin-left: auto;
+}
+}
+
+.design-archives {
+    position: absolute;
+    top: 180px;
+    right: 0;
+    width: 20%;
+    padding: 0 0 20px 0;
+    margin: 0;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    text-decoration: none;
+
+}
+
+.zen-resources {
+    position: absolute;
+    top: 280px;
+    right: 0;
+    width: 20%;
+    padding: 0 0 20px 0;
+    margin: 0;
+    overflow: visible;
+    background: transparent;
+
+}
+
+.design-selection {
+    position: absolute;
+    top: 460px;
+    right: 20px;
+    width: 20%;
+    padding: 0 0 20px 0;
+    margin: 0;
+    overflow: visible;
+    background: transparent;
+
+}
+
+ul {
+
+  list-style: none;
+
+}
+
+ul li a {
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.select,
+.archives,
+.resources {
+
+  visibility: hidden;
+}
+
+
+/* ALL DESIGNS NAV */
+
+.design-selection nav {
+  transition: .2s ease-in-out;
+  color: #000;
+}
+
+.design-selection nav li {
+  padding: 2em 2em;
+  margin: -20px 10px;
+  font-size: 1em;
+  border: 10px solid;
+  display: inline-grid;
+  text-align: center;
+  background-size: 20%;
+  transform: rotate(-5deg);
+  border-width: 10px;
+  border-color: transparent;
+  box-shadow: 0px 1px 20px 0px #00000054;
+}
+
+.design-selection nav li:hover {
+  transform: scale(1.075) rotate(-5deg);
+}
+
+
+.design-selection nav ul {
+  list-style-type: none;
+}
+
+.design-selection nav li:nth-child(1) {
+  background-image:url("https://media.istockphoto.com/vectors/abstract-contemporary-aesthetic-background-with-geometric-sun-lines-vector-id1224495764?k=6&m=1224495764&s=612x612&w=0&h=Z-EihMc9VIcxr8RThqkcCN9Gq9YCAwyhKmDbzhXXEMg=");
+  background-size: 100%;
+}
+
+.design-selection nav li:nth-child(1):hover {
+  border-color: orange;
+}
+
+
+.design-selection nav li:nth-child(2) {
+  background-image:url("https://media.istockphoto.com/photos/white-painted-texture-of-denim-picture-id488785903?k=6&m=488785903&s=612x612&w=0&h=KqgMtGWDQn5OsZiP-ez2xdoZf1cZlFuwe4C9nO7xr-s=");
+  background-size: 100%;
+}
+
+.design-selection nav li:nth-child(2):hover {
+  border-color: #c7c3c3;
+}
+
+.design-selection nav li:nth-child(3) {
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGNwclX3HkiIZKBCEH8fWHapqyEHeXAxAqg&usqp=CAU");
+  background-size: 100%;
+  color: white;
+}
+
+.design-selection nav li:nth-child(3):hover {
+  border-color: #484848;
+}
+
+.design-selection nav li:nth-child(4) {
+  background-image:url("https://images.squarespace-cdn.com/content/v1/591a1651b8a79b2d666a2224/1608573316778-S9ATKFNTRJ59SIPE78VD/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/IMG_6823.jpeg");
+  background-size: 100%;
+  color: white;
+}
+
+.design-selection nav li:nth-child(4):hover {
+  border-color: #805252;
+}
+
+.design-selection nav li:nth-child(5) {
+  background-image:url("https://www.muralswallpaper.com/app/uploads/hayward-colour-blocking-plain-kj.jpg");
+  background-size: 100%;
+}
+
+.design-selection nav li:nth-child(5):hover {
+  border-color:#f56ed3;
+}
+
+.design-selection nav li:nth-child(6) {
+  background-image:url("https://lh3.googleusercontent.com/proxy/e2NrbkN7epfDZZNKFaO7hpbRxdcMK2U9l7oJenHzKucaWrAu9DIhdrOYtnYO10l4UeaHBBQ5SThi8LcCZ7G2OHqFYT5GmWwgpYcjrRXxBLVaWrI6yzrMTZi3Z3QwgJcfP-PJopDZzwH7Hz8hVWimG4XajK--1ucb3WkpVrt66Oyxqm0WwiFX707r2LR_nVUxQ7Bwpb8Hs6ulJiZOJKgHpYwGkcqJBNAZSqE");
+  background-size: 100%;
+}
+
+.design-selection nav li:nth-child(6):hover {
+  border-color: #c7c3c3;
+}
+
+.design-selection nav li:nth-child(7) {
+  background-image:url("https://i.guim.co.uk/img/media/e746109cf7315dbb58c23d0b903e4d9c579bfb25/0_0_4096_2459/master/4096.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=3a2a090066c5bfc15c0571dc7261968f");
+  background-size: 100%;
+}
+
+.design-selection nav li:nth-child(7):hover {
+  border-color: #fff;
+}
+
+.design-selection nav li:nth-child(8) {
+  background-image:url("https://mymodernmet.com/wp/wp-content/uploads/2020/05/green-color-history-thumbnail.jpg");
+  background-size: 100%;
+  color: white;
+}
+
+.design-selection nav li:nth-child(8):hover {
+  border-color: #15ab8d;
+}
