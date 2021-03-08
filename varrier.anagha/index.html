@@ -2,95 +2,119 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Anagha Varrier</title>
-
-	<meta name="viewport" content="width=device-width">
-
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
-
-
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rumi Thought Tracker</title>
+	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script src="lib/js/jquery-2.2.4.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-	
-	<header class="navbar nav-material">
-		<div class="container display-flex">
-			<div class="flex-none">
-				<h1>Anagha Varrier</h1>
-			</div>
-			<div class="flex-stretch"></div>
-			<nav class="flex-none nav">
-				<ul class="container display-flex">
-					<li><a href="#">Home</a></li>
-					<li><a href="store.php">Work</a></li>
-					<li><a href="about.php">About</a></li>
-					<li><a href="cart.php">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
 
-
-
-	<section class="container" style="max-width: 2000px;">
-
-		<div class="full-image" style="background-image:url('img/hi.png')"><br><br>
-	</section>
-
-	<section class="container">
-
-		<br><br><br><br><br>
-
-		<div class="grid gap">
+	<section data-role="page" id="login-page">
 		
-			<div class="col-xs-12 col-md-6">
-				<figure class="figure product-overlay">
-					<img src="img/yellow.png" alt="">
-					<figcaption>
-						<div class="caption-body">
-							<div>Work 1</div>
-							<div>Role</div>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-6">
-				<figure class="figure product-overlay">
-					<img src="img/blue.png" alt="">
-					<figcaption>
-						<div class="caption-body">
-							<div>Work 2</div>
-							<div>Role</div>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-		</div>
-	</section>
+		<header data-role="header">
+			<h1>Rumi Thought Tracker</h1>
+		</header>
 
-	<section class="container" style="max-width: 2000px;">
+		<img class="logo-img" src="img/rumilogo.png" alt="">
 
-		<div class="view-window" style="background-image:url('img/process.png')">
-	</section>
-
-		<div class="card soft">
-			<div class="form-control display-flex flex-align-center">
-					<div class="flex-stretch">
-						<label class="form-label"></label>
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="flex-stretch"></div>
+			<div class="flex-none">
+				<form class="form" id="login-form" data-ajax="false">
+					<div class="form-control">
+						<label for="login-username" class="form-label">Username</label>
+						<input class="form-input" type="text" id="login-username" data-role="none">
 					</div>
-					<div class="flex-none">
-						<label class="form-label">I would love to hear from you!</label>
+					<div class="form-control">
+						<label for="login-password" class="form-label">Password</label>
+						<input class="form-input" type="password" id="login-password" data-role="none">
 					</div>
-					<div class="flex-stretch">
-						<input type="email" placeholder="youremail@email.com" class="form-input">
+					<div class="form-control">
+						<a href="#recent-page" class="form-button">Login</a>
 					</div>
-					<div class="flex-stretch">
-						<label class="form-label"></label>
-					</div>
+				</form>
 			</div>
 		</div>
+
+	</section>
+
+	</section>
+
+	<section data-role="page" id="recent-page">
+		
+		<div data-role="main">
+		MAPMAPMAPMAPMAP!
+		</div>
+		
+
+		<footer data-role="footer">
+			<a href="#recent-page">Map</a>
+			<a href="#list-page">List</a>
+			<a href="#user-profile-page">Profile</a>
+		</footer>
+
+	</section>
+
+	<section data-role="page" id="list-page">
+		
+		<header data-role="header">
+			<h1>Search</h1>
+		</header>
+		<div data-role="main">
+			<ul>
+				<li><a href="#thought-profile-page">School Work</a></li>
+				<li><a href="#thought-profile-page">Career</a></li>
+				<li><a href="#thought-profile-page">Health</a></li>
+				<li><a href="#thought-profile-page">Friends</a></li>
+				<li><a href="#thought-profile-page">News</a></li>
+				<li><a href="#thought-profile-page">Finances</a></li>
+			</ul>
+		</div>
+		
+
+		<footer data-role="footer">
+			<a href="#recent-page">Map</a>
+			<a href="#list-page">List</a>
+			<a href="#user-profile-page">Profile</a>
+		</footer>
+
+	</section>
+
+	<section data-role="page" id="user-profile-page">
+
+		<div data-role="main">
+         Profile
+         <p>
+            <a href="#login-page">Sign Out</a>
+         </p>
+		
+
+		<footer data-role="footer">
+			<a href="#recent-page">Map</a>
+			<a href="#list-page">List</a>
+			<a href="#user-profile-page">Profile</a>
+		</footer>
+
+	</section>
+
+	<section data-role="page" id="thought-profile-page">
+		
+		<header data-role="header">
+			<h1>Search</h1>
+			<a href="#" data-rel="back"><<</a>
+		</header>
+
+		<div data-role="main">
+			Thought Profile
+		</div>
+		
+
+	</section>
+
+	
 	
 </body>
 </html>
