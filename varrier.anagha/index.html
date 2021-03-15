@@ -258,10 +258,9 @@
 
       <div data-role="main">
 
-         <div class="profile-username">Username</div>
-         <hr>
+         <div class="profile-username">Good evening, Jane Doe</div>
 
-         <div class="overscroll">
+         <!-- <div class="overscroll">
             <div class="display-data">
                <div class="display-number">
                   <p>270</p>
@@ -271,7 +270,7 @@
                   <p>Thoughts</p>
                   <p>Favorites</p>
                </div>
-            </div>
+            </div> -->
 
             <form action="" id="profile-form" data-ajax="false" class="form">
                <div class="form-control">
@@ -291,7 +290,7 @@
                   <input class="form-input" type="password" id="signin-password" data-role="none">
                </div>
                <div class="form-control" style=" margin: 1.5em 0;">
-                  <a href="#profile-page" class="form-button signin-button" style="float: none; margin: 0 auto; margin-bottom: 10vh;">Save</a>
+                  <a href="#profile-page" class="form-button signin-button">Save</a>
                </div>
             </form>
          </div>
@@ -300,7 +299,7 @@
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
-   <!-- SQUIRREL PROFILE SECTION -->
+   <!-- THOUGHT PROFILE SECTION -->
    <section data-role="page" id="thought-profile-page">
       <header data-role="header" style="height: 17vh; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
             <!-- <a href="#" data-rel="back">Back</a> -->
@@ -349,10 +348,6 @@
 
             <form action="" id="profile-form" data-ajax="false" class="form">
                <div class="form-control">
-                  <label for="signin-username" class="form-label">Make</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
-               </div>
-               <div class="form-control">
                   <label for="signin-username" class="form-label">Type</label>
                   <input class="form-input" type="text" id="signin-username" data-role="none">
                </div>
@@ -368,7 +363,7 @@
    <!-- ADD NEW SECTION -->
    <section data-role="page" id="add-new-page">
       <header data-role="header" style="height: 17vh; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
-         <h1>Squirrel Detail</h1>
+         <h1>Thought Detail</h1>
          <ul>
             <li>
                <a href="#" data-rel="back">
@@ -382,20 +377,15 @@
       <div data-role="main">
          <form action="" id="profile-form" data-ajax="false" class="form">
             <div class="form-control">
-               <label for="model" class="form-label">Name</label>
+               <label for="model" class="form-label">Thought Name</label>
                <input class="form-input" type="text" id="model" data-role="none">
-            </div>
-            <div class="form-control">
-               <label for="make" class="form-label">Make</label>
-               <input class="form-input" type="text" id="make" data-role="none">
             </div>
             <div class="form-control">
                <label for="thought-type" class="form-label">Type</label>
                <select class="form-input" type="text" id="thought-type" data-role="none">
-                  <option value="1">Tree squirrel</option>
-                  <option value="2">Ground squirrel</option>
-                  <option value="3">Chipmunk</option>
-                  <option value="3">Flying squirrel</option>
+                  <option value="1">Positive</option>
+                  <option value="2">Negative</option>
+                  <option value="3">Neutral</option>
                </select>
             </div>
             <div class="form-control">
@@ -403,8 +393,8 @@
                <input class="form-input" type="text" id="locatioin" data-role="none">
             </div>
          
-            <div class="form-control" style=" margin: 1.5em 0;">
-               <a href="#thought-profile-page" class="form-button signin-button" style="float: none; margin: 0 auto;">Save</a>
+            <div class="form-control">
+               <a href="#thought-profile-page" class="form-button signin-button">Save</a>
             </div>
          </form>
       </div>
