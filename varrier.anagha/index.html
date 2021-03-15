@@ -4,117 +4,426 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rumi Thought Tracker</title>
+
 	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
-	<link rel="stylesheet" href="css/app.css">
-	<script src="lib/js/jquery-2.2.4.min.js"></script>
-	<script src="js/app.js"></script>
-	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+   <link rel="stylesheet" href="css/app.css">
+
+   <script src="lib/js/jquery-2.2.4.min.js"></script>
+
+   <script src="js/signin.js"></script>
+   <script src="js/app.js"></script>
+
+   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
-	<section data-role="page" id="login-page">
-		
-		<header data-role="header">
-			<h1>Rumi Thought Tracker</h1>
-		</header>
+<!--SIGN-IN SECTION -->
+   <section data-role="page" id="signin-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="logo">
+               <img src="img/rumilogo.png" alt="">
+         </div>
+         <div class="flex-none">
+            <div class="intro">
+               <h1>Rumi</h1>
+               <h3>Thought Tracker</h3>
+            </div>
 
-		<img class="logo-img" src="img/rumilogo.png" alt="">
+            <form class="form" id="signin-form" data-ajax="false" style="padding:2em">
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Username</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-password" class="form-label">Password</label>
+                  <input class="form-input" type="password" id="signin-password" data-role="none">
+               </div>
+               <div class="form-control">
+                   <input type="submit" class="form-button" value="Sign In" data-role="none">
+                   <label class="keep">Keep me signed in <input type="checkbox"></label>
+               </div>
+            </form>
+            <div class="register">
+               <p>Don't have an account yet? <a href="#register-page">Let's make one!</a></p>
+            </div>
 
-		<div data-role="main" class="display-flex flex-vertical">
-			<div class="flex-stretch"></div>
-			<div class="flex-none">
-				<form class="form" id="login-form" data-ajax="false">
-					<div class="form-control">
-						<label for="login-username" class="form-label">Username</label>
-						<input class="form-input" type="text" id="login-username" data-role="none">
-					</div>
-					<div class="form-control">
-						<label for="login-password" class="form-label">Password</label>
-						<input class="form-input" type="password" id="login-password" data-role="none">
-					</div>
-					<div class="form-control">
-						<a href="#recent-page" class="form-button">Login</a>
-					</div>
-				</form>
-			</div>
-		</div>
 
-	</section>
+         </div>
+      </div>
+   </section>
 
-	</section>
+   <!--SIGN-UP SECTION -->
+      <section data-role="page" id="register-page">
 
-	<section data-role="page" id="recent-page">
-		
-		<div data-role="main">
-		MAPMAPMAPMAPMAP!
-		</div>
-		
+      <div id="triangle-left"></div>
+      
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="logo">
+            <img src="img/rumilogo.png" alt="">
+         </div>
 
-		<footer data-role="footer">
-			<a href="#recent-page">Map</a>
-			<a href="#list-page">List</a>
-			<a href="#user-profile-page">Profile</a>
-		</footer>
 
-	</section>
+         <div class="flex-none">
+            <div class="intro">
+               <h1>Hi there!</h1>
+               <h3>Please register your account</h3>
+            </div>
 
-	<section data-role="page" id="list-page">
-		
-		<header data-role="header">
-			<h1>Search</h1>
-		</header>
-		<div data-role="main">
-			<ul>
-				<li><a href="#thought-profile-page">School Work</a></li>
-				<li><a href="#thought-profile-page">Career</a></li>
-				<li><a href="#thought-profile-page">Health</a></li>
-				<li><a href="#thought-profile-page">Friends</a></li>
-				<li><a href="#thought-profile-page">News</a></li>
-				<li><a href="#thought-profile-page">Finances</a></li>
-			</ul>
-		</div>
-		
+            <form action="" id="signin-form" data-ajax="false" class="form" style="padding: 1em">
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Username</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-email" class="form-label">Email</label>
+                  <input class="form-input" type="text" id="signin-email" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-password" class="form-label">Password</label>
+                  <input class="form-input" type="password" id="signin-password" data-role="none">
+               </div>
+               <div class="form-control" style=" margin: 1.5em 0;">
+                  <a href="#recent-page" class="form-button signin-button">Save</a>
+                  <label class="keep">Keep me signed in<input type="checkbox">
+                  </label>
+               </div>
+            </form>
 
-		<footer data-role="footer">
-			<a href="#recent-page">Map</a>
-			<a href="#list-page">List</a>
-			<a href="#user-profile-page">Profile</a>
-		</footer>
+            <div class="register">
+               <p>Already have an account? <a href="#signin-page">Sign in!</a></p>
+            </div>
+         </div>
+      </div>
+   </section>
 
-	</section>
 
-	<section data-role="page" id="user-profile-page">
 
-		<div data-role="main">
-         Profile
-         <p>
-            <a href="#login-page">Sign Out</a>
-         </p>
-		
+   <!-- MAP SECTION -->
+   <section data-role="page" id="recent-page">
+      <div data-role="main">
+      
+         <img src="img/map.png" alt="">
 
-		<footer data-role="footer">
-			<a href="#recent-page">Map</a>
-			<a href="#list-page">List</a>
-			<a href="#user-profile-page">Profile</a>
-		</footer>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
 
-	</section>
+   <!-- LIST SECTION -->
+   <section data-role="page" id="list-page">
+      <header data-role="header">
+         <h1>My Thoughts</h1>
+         <ul>
+            <li class="flex-stretch"></li>
+            <li>
+               <a href="#add-new-page">
+                  <img src="img/add.png" alt="">
+               </a>
+            </li>
+         </ul>
+      </header>
 
-	<section data-role="page" id="thought-profile-page">
-		
-		<header data-role="header">
-			<h1>Search</h1>
-			<a href="#" data-rel="back"><<</a>
-		</header>
+      <div data-role="main">
+         <div class="search">
+            <form>
+               <input type="search" placeholder="Search Thoughts">
+            </form>
 
-		<div data-role="main">
-			Thought Profile
-		</div>
-		
+         <!-- Question: display sort and filter -->
+            <div class="sort">
+               <select>
+                  <option value="1">Newest</option>
+                  <option value="2">Oldest</option>
+               </select>
+               <select>
+                  <option value="1">Thought</option>
+                  <option value="2">Type</option>
+                  <option value="3">Location</option>
+               </select>
+            </div>
+         </div>
+            
+       
 
-	</section>
+         <div class="overscroll">
+            <ul>
+               <li>
+                  <a href="#thought-profile-page" style="display: flex; position: relative;">
+                     <img src="img/rumilogo.png">
+                     <div class="list-item-text">
+                        <h3>Thought</h3>
+                        <p>Type:</p>
+                        <p>Location:</p>
+                     </div>
+                     <img src="img/like.png" style="width: 9%; position: absolute; right: 4%;">
+                  </a>
+               </li>
+               <li>
+                  <a href="#thought-profile-page" style="display: flex; position: relative;">
+                     <img src="img/rumilogo.png">
+                     <div class="list-item-text">
+                        <h3>Thought</h3>
+                        <p>Type:</p>
+                        <p>Location:</p>
+                     </div>
+                     <img src="img/like.png" style="width: 9%; position: absolute; right: 4%;">
+                  </a>
+               </li>
+               <li>
+                  <a href="#thought-profile-page" style="display: flex; position: relative;">
+                     <img src="img/rumilogo.png">
+                     <div class="list-item-text">
+                        <h3>Thought</h3>
+                        <p>Type:</p>
+                        <p>Location:</p>
+                     </div>
+                     <img src="img/like.png" style="width: 9%; position: absolute; right: 4%;">
+                  </a>
+               </li>
+               <li>
+                  <a href="#thought-profile-page" style="display: flex; position: relative;">
+                     <img src="img/rumilogo.png">
+                     <div class="list-item-text">
+                        <h3>Thought</h3>
+                        <p>Type:</p>
+                        <p>Location:</p>
+                     </div>
+                     <img src="img/like.png" style="width: 9%; position: absolute; right: 4%;">
+                  </a>
+               </li>
+               <li>
+                  <a href="#thought-profile-page" style="display: flex; position: relative;">
+                     <img src="img/rumilogo.png">
+                     <div class="list-item-text">
+                        <h3>Thought</h3>
+                        <p>Type:</p>
+                        <p>Location:</p>
+                     </div>
+                     <img src="img/like.png" style="width: 9%; position: absolute; right: 4%;">
+                  </a>
+               </li>
+               <li>
+                  <a href="#thought-profile-page" style="display: flex; position: relative;">
+                     <img src="img/rumilogo.png">
+                     <div class="list-item-text">
+                        <h3>Thought</h3>
+                        <p>Type:</p>
+                        <p>Location:</p>
+                     </div>
+                     <img src="img/like.png" style="width: 9%; position: absolute; right: 4%;">
+                  </a>
+               </li>
+               <li>
+                  <a href="#thought-profile-page" style="display: flex; position: relative;">
+                     <img src="img/rumilogo.png">
+                     <div class="list-item-text">
+                        <h3>Thought</h3>
+                        <p>Type:</p>
+                        <p>Location:</p>
+                     </div>
+                     <img src="img/like.png" style="width: 9%; position: absolute; right: 4%;">
+                  </a>
+               </li>
+               <li>
+                  <a href="#thought-profile-page" style="display: flex; position: relative;">
+                     <img src="img/rumilogo.png">
+                     <div class="list-item-text">
+                        <h3>Thought</h3>
+                        <p>Type:</p>
+                        <p>Location:</p>
+                     </div>
+                     <img src="img/like.png" style="width: 9%; position: absolute; right: 4%;">
+                  </a>
+               </li>
+               
+            </ul>
+         </div>
+      </div>
 
-	
-	
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+   <!-- USER PROFILE SECTION -->
+   <section data-role="page" id="user-profile-page">
+       <header data-role="header">
+         <h1>Profile</h1>
+         <ul>
+            <li class="flex-stretch"></li>
+            <li>
+               <a href="#" class="js-logout">
+                  <img src="img/edit.png" alt="">
+               </a>
+            </li>
+         </ul>
+      </header>
+
+      <div data-role="main">
+
+         <div class="profile-username">Username</div>
+         <hr>
+
+         <div class="overscroll">
+            <div class="display-data">
+               <div class="display-number">
+                  <p>270</p>
+                  <p>5</p>
+               </div>
+               <div class="display-text">
+                  <p>Thoughts</p>
+                  <p>Favorites</p>
+               </div>
+            </div>
+
+            <form action="" id="profile-form" data-ajax="false" class="form">
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">First Name</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Last Name</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-email" class="form-label">Email</label>
+                  <input class="form-input" type="email" id="signin-email" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-password" class="form-label">Password</label>
+                  <input class="form-input" type="password" id="signin-password" data-role="none">
+               </div>
+               <div class="form-control" style=" margin: 1.5em 0;">
+                  <a href="#profile-page" class="form-button signin-button" style="float: none; margin: 0 auto; margin-bottom: 10vh;">Save</a>
+               </div>
+            </form>
+         </div>
+      </div>
+
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+   <!-- SQUIRREL PROFILE SECTION -->
+   <section data-role="page" id="thought-profile-page">
+      <header data-role="header" style="height: 17vh; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+            <!-- <a href="#" data-rel="back">Back</a> -->
+         <h1>Thought Detail</h1>
+         <ul>
+            <li>
+               <a href="#" data-rel="back">
+                  <img src="img/back.png" alt="" style="width:28px; padding-top: 10px">
+               </a>
+            </li>
+            <li class="flex-stretch"></li>
+         </ul>
+      </header>
+
+      <div data-role="main">
+         <div class="overscroll">
+
+            <div class="profile-username">Name</div>
+            <!-- <a href="">
+               <img src="img/trash.png" style="padding-top: 3vh; width: 25%;">
+            </a> -->
+            <!-- <ul>
+               <li class="flex-stretch"></li>
+               <li>
+                  <a href="">
+                     <img src="img/trash.png">
+                  </a>
+               </li>
+            </ul> -->
+            
+            <hr>
+         <!--  <ul>
+               <li><img src="img/like.png" alt="" style="height: 50%; align-self: baseline;"></li>
+               <li><a href=""><img src="img/edit.png" alt=""></a></li>
+            </ul> -->
+
+            <div class="display-data">
+               <div class="display-number">
+                  <img src="img/like.png" alt="">
+                  <a href="#add-new-page">
+                     <!-- <img src="img/edit.png" alt=""> -->
+                     Edit
+                  </a>
+               </div>
+            </div>
+
+            <form action="" id="profile-form" data-ajax="false" class="form">
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Make</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Type</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Location</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
+
+   <!-- ADD NEW SECTION -->
+   <section data-role="page" id="add-new-page">
+      <header data-role="header" style="height: 17vh; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+         <h1>Squirrel Detail</h1>
+         <ul>
+            <li>
+               <a href="#" data-rel="back">
+                  <img src="img/back.png" alt="" style="width: 28px;padding-top: 10px;">
+               </a>
+            </li>
+            <li class="flex-stretch"></li>
+         </ul>
+      </header>
+
+      <div data-role="main">
+         <form action="" id="profile-form" data-ajax="false" class="form">
+            <div class="form-control">
+               <label for="model" class="form-label">Name</label>
+               <input class="form-input" type="text" id="model" data-role="none">
+            </div>
+            <div class="form-control">
+               <label for="make" class="form-label">Make</label>
+               <input class="form-input" type="text" id="make" data-role="none">
+            </div>
+            <div class="form-control">
+               <label for="thought-type" class="form-label">Type</label>
+               <select class="form-input" type="text" id="thought-type" data-role="none">
+                  <option value="1">Tree squirrel</option>
+                  <option value="2">Ground squirrel</option>
+                  <option value="3">Chipmunk</option>
+                  <option value="3">Flying squirrel</option>
+               </select>
+            </div>
+            <div class="form-control">
+               <label for="locatioin" class="form-label">Location</label>
+               <input class="form-input" type="text" id="locatioin" data-role="none">
+            </div>
+         
+            <div class="form-control" style=" margin: 1.5em 0;">
+               <a href="#thought-profile-page" class="form-button signin-button" style="float: none; margin: 0 auto;">Save</a>
+            </div>
+         </form>
+      </div>
+   </section>
+
+   <script type="text/template" id="footer-template">
+      <ul>
+         <li><a href="#recent-page">
+            <img src="img/pin.png" alt=""></a>
+         </li>
+         <li><a href="#list-page">
+            <img src="img/home.png" alt=""></a>
+         </li>
+         <li><a href="#user-profile-page">
+            <img src="img/profile.png" alt=""></a>
+         </li>
+      </ul>
+   </script>
+   
+
 </body>
 </html>
