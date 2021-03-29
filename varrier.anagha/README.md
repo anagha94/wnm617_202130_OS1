@@ -1,4 +1,5 @@
 ##Relevant Links
 
--http://anaghavarrier.com/
--http://anaghavarrier.com/aau/wnm608/css/styleguide.css
+Website - http://anaghavarrier.com/
+Midterm - http://anaghavarrier.com/aau/wnm617/varrier.anagha/index.html
+Zengarden Assignment - http://anaghavarrier.com/aau/wnm617/varrier.anagha/zengarden/index.html
