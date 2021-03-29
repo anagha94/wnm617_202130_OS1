@@ -173,6 +173,7 @@ a:hover {
   z-index: 2;
 }
 
+
 [data-role="button"] {
   padding: 0;
   margin: 5em;
@@ -514,6 +515,11 @@ a:hover {
   height: 100%;
 }
 
+
+#footer-template ul li a:current {
+  color: var(--color-main-light);
+}
+
 [data-role="back"]{
   width:28px;
   padding-top: 10px;
@@ -580,6 +586,15 @@ input[type='radio']:checked:after {
 	height: 30%;
 	padding: 0;
 	margin-left: 3em;
+}
+
+[data-role="footer"] a:active {
+    display: block;
+    margin: 0;
+    padding: 7px 1em;
+    text-align: center;
+    line-height: normal;
+    color: var(--color-main-medium);
 }
 
 

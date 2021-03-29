@@ -17,7 +17,6 @@ const checkLoginForm = () => {
    let password = $("#login-password").val();
 
    if(password=="1234567890") {
-      sessionStorage.userId = 3;
       $.mobile.navigate("#main-page");
    } else {
       alert("Password does not match");
