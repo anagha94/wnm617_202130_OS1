@@ -4,21 +4,16 @@ $(()=>{
    checkUserId();
 
    $(document)
-   .ready(() => {
-      const allThoughts = [
-         {
-            name: "Friends",
-            image: "img/friends.png",
-            type: "positive",
-         },
-         {
-            name: "Homework",
-            image: "img/homework.png",
-            type: "negative",
-         },
-      ];
+   .on("pagecontainerbeforeshow", function(event, ui) {
+      console.log(ui.toPage[0].id)
 
-      sessionStorage.setItem('allThoughts', JSON.stringify(allThoughts));
+      // PAGE ROUTING
+      switch(ui.toPage[0].id) {
+         case "main-page": MainPage(); break;
+         case "list-page": ListPage(); break;
+         case "user-profile-page": UserProfilePage(); break;
+         case "thought-profile-page": ThoughtProfilePage(); break;
+      }
    })
 
 

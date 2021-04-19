@@ -598,5 +598,65 @@ input[type='radio']:checked:after {
     color: var(--color-main-medium);
 }
 
+.animal-top{
+	flex:none;
+	height:40vh;
+	background-position: center;
+	background-size:cover;
+}
 
+.animal-bottom{
+	flex:1 1 100%;
+	position:relative;
+	overflow: hidden;
+}
+
+.animal-bottom-section{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.animal-nav{
+	text-align: center;
+}
+
+
+.animallist{}
+.animallist-item {
+	font-weight: normal;
+	margin:1em;
+	border-radius:1em;
+	overflow: hidden;
+	box-shadow: 3px 8px 10px rgb(0 0 0 / 20%);
+}
+
+.animallist-image img{
+	width:100px;
+	height:100px;
+	vertical-align: middle;
+}
+
+
+.animallist-description{
+	padding:1em;
+}
+
+.animallist-name{
+	font-size: 1.3em;
+}
+
+
+.user-profile-image{
+	text-align: center;
+	padding:2em;
+}
+
+.user-profile-image img{
+	widows: 100%;
+	height:100%;
+	border-radius: 100%;
+}
 
