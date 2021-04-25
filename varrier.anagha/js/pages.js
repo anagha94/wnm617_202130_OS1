@@ -1,4 +1,14 @@
-const MainPage = async () => {}
+const MainPage = async () => {
+
+   new google.maps.Map(
+
+      $("#main-page .map")[0],
+
+      {
+          center: { lat: 37.735078, lng: -122.436844 },
+          zoom: 8,
+        });
+}
 
 const ListPage = async () => {
    let animals = await query({

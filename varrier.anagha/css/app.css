@@ -371,12 +371,20 @@ a:hover {
 }
 
 #main-page [data-role="main"] {
-  background-image: url('../images/map.png');
   background-position: center;
   background-color: var(--color-white);
   background-size: cover;
   padding: 0;
   top: 0px;
+}
+
+.map {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* LIST */
@@ -659,4 +667,6 @@ input[type='radio']:checked:after {
 	height:100%;
 	border-radius: 100%;
 }
+
+
 
