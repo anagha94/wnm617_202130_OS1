@@ -86,6 +86,15 @@ a:hover {
 .flex-vertical { flex-direction:column; }
 
 
+/* SIGN-IN */
+input[type=text] {
+  width: 300px;
+  transition: ease-in-out, width .35s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 310px;
+}
 
 /* FORM ELEMENTS */
 /* FORM ELEMENTS */
@@ -180,11 +189,10 @@ a:hover {
 }
 
 .floating-plus {
-	position: fixed;
 	bottom: 90px;
-	left: 15px;
+	/*left: 15px;
 	width: 91%;
-	/* height: 60px; */
+	/* height: 60px;
 	border-radius: 16px;
 	background-color: var(--color-main-dark);
 	text-align: center;
@@ -193,8 +201,22 @@ a:hover {
 	color: var(--color-white);
 	z-index: 1;
 	padding: .6em 1em;
-	box-shadow: 0px 8px 10px #0000004f;
+	box-shadow: 0px 8px 10px #0000004f;*/
+	display: inline-block;
+	vertical-align: middle;
+	background-color: var(--color-main-dark);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 50% !important;
+	height: var(--header-height);
+	line-height: var(--header-height);
+	width: var(--header-height);
+	text-align: center;
+	font-size: 2em;
+	bottom: 80px;
+	right: 10px;
 }
+
+
 
 .floating-thought {
 	display: none;
@@ -294,7 +316,7 @@ a:hover {
 #signin-page [data-role="main"],
 #register-page [data-role="main"],
 #welcome-page [data-role="main"],
-#login-page [data-role="main"] {
+#main-page [data-role="main"] {
    top: 0;
    padding-top: 0;
 }
@@ -667,6 +689,150 @@ input[type='radio']:checked:after {
 	height:100%;
 	border-radius: 100%;
 }
+
+/* MODAL */
+.modal,
+.modal-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.modal.active {
+  opacity: 1;
+}
+
+.modal-back {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal.active .modal-back {
+  pointer-events: initial;
+}
+
+
+
+.modal-popup {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 5vh));
+  transition: all 0.3s;
+  /*border-radius: 5px;
+  overflow: hidden;*/
+}
+
+.modal.active .modal-popup {
+  transform: translate(-50%, -50%);
+  pointer-events: initial;
+}
+
+.modal-popup.small {
+  width: initial;
+}
+
+.modal-popup :first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.modal-popup :last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+
+
+.modal-drawer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.modal-drawer.left,
+.modal-drawer.right {
+  height: 100%;
+  width: 70vw;
+}
+
+.modal-drawer.left { left: 0; transform: translateX(-100%); }
+.modal-drawer.right { right: 0; transform: translateX(100%); }
+
+.modal-drawer.top,
+.modal-drawer.bottom {
+  height: 30vh;
+  width: 100%;
+}
+
+.modal-drawer.top { top: 0; transform: translateY(-100%); }
+.modal-drawer.bottom { bottom: 0; transform: translateY(100%); }
+
+.modal.active .modal-drawer {
+  transform: translate(0);
+  pointer-events: initial;
+}
+
+.modal-drawer .modal-card {
+  padding: 1em;
+  box-shadow: none;
+
+}
+
+.modal-card .modal-body {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+}
+
+.modal-head,
+.modal-foot {
+  background-color: var(--color-neutral-light);
+  padding: 0.5em 1em;
+}
+
+.modal-body {
+  background-color: var(--color-white);
+  flex: 1 1 100%;
+  padding: 0.5em 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+/*  FLOATERS */
+.floater {
+	position: absolute;
+}
+
+.floater-right {
+	position: absolute; 
+	right: 0; 
+}
+
+.floater-left { 
+	left: 100px; 
+}
+
+.floater-top { 
+	top: 100px; 
+}
+
+.floater-bottom { 
+	position: absolute;
+	bottom: 80px; 
+}
+
+.floater-icon {
+  padding: 1em;
+  display: block;
+} 
 
 
 

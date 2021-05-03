@@ -13,6 +13,7 @@
    <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
+   <script src="js/maps.js"></script>
    <script src="js/signin.js"></script>
    <script src="js/app.js"></script>
 
@@ -24,35 +25,46 @@
 <!--SIGN-IN SECTION -->
    <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-vertical">
+         
          <div class="logo">
                <img src="img/rumilogo.png" alt="">
          </div>
+
          <div class="flex-none">
+         
             <div class="intro">
-               <h1>Rumi</h1>
-               <h3>Thought Tracker</h3>
-               <!-- <p> Please enter your email to continue.</p> -->
+                  <h1>Rumi</h1>
+                  <h3>Thought Tracker</h3>
+                  <!-- <p> Please enter your email to continue.</p> -->
             </div>
 
             <form class="form" id="signin-form" data-ajax="false">
                <div class="form-control">
-                  <label for="signin-username" class="form-label">Please enter your email to continue.</label>
-                  <input class="form-input" type="text" id="signin-email" data-role="none">
+                  <label for="signin-username" class="form-label">Hi! Sign in to your account to continue.</label>
+                  <input class="form-input" type="text" placeholder="Username" id="signin-username" data-role="none">
+                  <input class="form-input" type="text" placeholder="Password" id="signin-password" data-role="none">
                </div>
                <div class="form-control">
-                   <input type="submit" class="form-button" value="Continue" data-role="none">
+                  <input type="submit" class="form-button" value="Continue" data-role="none">
                </div>
             </form>
+
+            <div class="register">
+               <p>Don't have an account yet?<a href="#register-page"> Let's make one!</a></p>
+            </div>
+
          </div>
       </div>
    </section>
 
-<!-- LOGIN SECTION -->
+<!-- LOGIN SECTION 
    <section data-role="page" id="login-page">
       <div data-role="main" class="display-flex flex-vertical">
+
          <div class="logo">
                <img src="img/rumilogo.png" alt="">
          </div>
+
          <div class="flex-none">
             <div class="intro">
                <p>Looks like you already have an account.</p>
@@ -70,12 +82,12 @@
             </form>
          </div>
       </div>
-   </section>
+   </section> -->
 
-   <!-- REGISTER-UP SECTION -->
+   <!-- REGISTER SECTION -->
    <section data-role="page" id="register-page">
 
-      <div id="triangle-left"></div>
+      <!-- <div id="triangle-left"></div> -->
       
       <div data-role="main" class="display-flex flex-vertical">
          <div class="logo">
@@ -85,25 +97,48 @@
          <div class="flex-none">
             <div class="intro">
                <p>
-                  Looks like you do not have an account. <br/>
-                  <a href="#register-page">Let's make one!</a>
+                  Please enter your details to continue. <br/>
                </p>
                <br/>
             </div>
 
             <form action="" id="register-form" data-ajax="false" class="form">
+
                <div class="form-control">
-                  <label for="signin-username" class="form-label">Username</label>
-                  <input class="form-input" type="text" id="register-username" data-role="none">
+                  <label for="register-firstname" class="form-label">Enter First Name</label>
+                  <input class="form-input" type="text" id="register-firstname" data-role="none" placeholder="First Name">
+               </div>
+
+               <div class="form-control">
+                  <label for="register-lastname" class="form-label">Enter Last Name</label>
+                  <input class="form-input" type="text" id="register-lastname" data-role="none" placeholder="Last Name">
+               </div>
+
+               <div class="form-control">
+                  <label for="register-username" class="form-label">Create a Username</label>
+                  <input class="form-input" type="text" id="register-username" data-role="none" placeholder="Username">
                </div>
                <div class="form-control">
-                  <label for="signin-password" class="form-label">Password</label>
-                  <input class="form-input" type="password" id="register-password" data-role="none">
+                  <label for="register-password" class="form-label">Enter Password</label>
+                  <input class="form-input" type="password" id="register-password" data-role="none" placeholder="Password">
                </div>
+
+               <div class="form-control">
+                  <label for="confirm-password" class="form-label">Confirm Password</label>
+                  <input class="form-input" type="password" id="confirm-password" data-role="none" placeholder="Re-enter Password">
+               </div>
+
                <div class="form-control" style=" margin: 1.5em 0;">
                   <a href="#welcome-page" class="form-button signin-button">Register</a>
                </div>
+
+
             </form>
+
+            <div class="register">
+               <p>Wait, no, I already have an account! <a href="#signin-page"> Login</a></p>
+            </div>
+
          </div>
       </div>
    </section>
@@ -115,7 +150,7 @@
       <img class = "big-image" src="img/rumiimage.jpeg" alt="">
 
       <div data-role="main">
-         <h2>Welcome, Anagha</h2>
+         <h2>Welcome, John</h2>
          <div class="welcome-subtext">
             <p>Rumi helps you understand your thought patterns. It tracks what you think about, where and when.
          </div>
@@ -139,22 +174,22 @@
       </header>
 
       <div data-role="main">
-         <form action="" id="profile-form" data-ajax="false" class="form">
+         <form action="" id="add-new-form" data-ajax="false" class="form">
             <div class="form-control">
                <label for="thought" class="form-label">Thought Name</label>
-               <input class="form-input" type="text" id="thought" data-role="none">
+               <input class="form-input" type="text" id="add-new-thought" data-role="none">
             </div>
             <div class="form-control">
                <label for="thought-type" class="form-label">Type</label>
-               <select class="form-input" type="text" id="thought-type" data-role="none">
+               <select class="form-input" type="text" id="add-new-thought-type" data-role="none">
                   <option value="1">Positive</option>
                   <option value="2">Negative</option>
                   <option value="3">Neutral</option>
                </select>
             </div>
             <div class="form-control">
-               <label for="locatioin" class="form-label">Location</label>
-               <input class="form-input" type="text" id="location" data-role="none">
+               <label for="location" class="form-label">Location</label>
+               <input class="form-input" type="text" id="add-new-location" data-role="none">
             </div>
          
             <div class="form-control">
@@ -166,10 +201,21 @@
 
    <!-- MAP SECTION -->
    <section data-role="page" id="main-page">
+
+      <div data-role="main">
+         <div class="map"></div>
+
+         <div class="floater-bottom floater-right" style="padding: 1em;">
+               <a href="#choose-thought-page" class="floating-plus">&plus;</a>
+            </div>
+         </div>
       
-      <div class="floating-plus">
-         <a href="#list-only-page">Check in</a>
+      <div class="modal" id="recent-drawer">
+         <div class="modal-drawer modal-card top" style="width: 80% !important; top: 2em; left: 10%; height: initial;">
+            <div class="modal-body"></div>
+         </div>
       </div>
+
       
       <div class="floating-thought">
          <div class="floating-thought-inner">
@@ -181,38 +227,35 @@
          </div>
       </div>
 
-      <div data-role="main">
-         <div class="map"></div>
-         <img class="map-image" src="img/map.png" alt="">
       </div>
       <footer data-role="footer" data-template="#footer-template">
-         <script type="text/template" id="footer-template">
-      <ul>
-         <li>
-            <a href="#list-page">
-               <img src="img/pin.png" alt=""><br/>
-               Thoughts
-            </a>
-         </li>
-         <li>
-            <a href="#main-page">
-               <img src="img/home.png" alt=""><br/>
-               Home
-            </a>
-         </li>
-         <li>
-            <a href="#user-profile-page">
-               <img src="img/profile.png" alt=""><br/>
-               Profile
-            </a>
-         </li>
-      </ul>
-   </script>
+      <script type="text/template" id="footer-template">
+            <ul>
+               <li>
+                  <a href="#list-page">
+                     <img src="img/pin.png" alt=""><br/>
+                     Thoughts
+                  </a>
+               </li>
+               <li>
+                  <a href="#main-page">
+                     <img src="img/home.png" alt=""><br/>
+                     Home
+                  </a>
+               </li>
+               <li>
+                  <a href="#user-profile-page">
+                     <img src="img/profile.png" alt=""><br/>
+                     Profile
+                  </a>
+               </li>
+            </ul>
+      </script>
       </footer>
    </section>
 
-   <!-- ONLY LIST SECTION -->
-   <section data-role="page" id="list-only-page">
+   <!-- CHOOSE THOUGHT SECTION -->
+   <section data-role="page" id="choose-thought-page">
       <header data-role="header">
          <div class="back_button">
             <a href="#" data-rel="back">
@@ -406,20 +449,20 @@
 
          <div class="profile-username">
             <img class="profile-image" src="img/profileimg.png">
-            <h2>Hi, Anagha</h2>
+            <h2>Hi, John</h2>
          </div>
          
          <div class="display-number display-text" style="background-color: var(--color-main-light);">
-            <h2>17</h2>
-            <p style="font-size: 0.8em">Check-ins</p>
+            <h2 style="padding: 5px;">17</h2>
+            <p style="font-size: 0.8em; padding: 5px;">Check-ins</p>
          </div>
 
          <div class="display-number display-text" style="background-color: var(--color-second-yellow);">
-            <h2>3</h2>
-            <p style="font-size: 0.8em;">Day Streak</p>
+            <h2 style="padding: 5px;">3</h2>
+            <p style="font-size: 0.8em; padding: 5px;">Day Streak</p>
          </div>
 
-            <form action="" id="profile-form" data-ajax="false" class="form">
+            <!-- <form action="" id="user-profile-form" data-ajax="false" class="form">
                <div class="form-control">
                   <input class="form-input" value="ACCOUNT" type="text" id="signin-username" data-role="none">
                </div>
@@ -431,7 +474,7 @@
                </div>
             </form>
          </div>
-      </div>
+      </div> -->
 
       <footer data-role="footer" data-template="#footer-template">
          <script type="text/template" id="footer-template">
@@ -474,7 +517,7 @@
       </header>
 
       <div data-role="main">
-         <form action="" id="profile-form" data-ajax="false">
+         <form action="" id="thought-profile-form" data-ajax="false">
             <img class="form-image" height="200px" src="img/friends.png">
             <br/>
             <div class="form-control">
@@ -523,14 +566,14 @@
       </header>
 
       <div data-role="main">
-         <form action="" id="profile-form" data-ajax="false" class="form">
+         <form action="" id="thought-form" data-ajax="false" class="form">
             <div class="form-control">
                <label for="thought" class="form-label">Thought Name</label>
-               <input class="form-input" type="text" id="thought" data-role="none" value="Friends">
+               <input class="form-input" type="text" id="thought-name" data-role="none" value="Friends">
             </div>
             <div class="form-control">
                <label for="thought-type" class="form-label">Type</label>
-               <select class="form-input" type="text" id="thought-type" data-role="none">
+               <select class="form-input" type="text" id="thought-profile-type" data-role="none">
                   <option selected value="1">Positive</option>
                   <option value="2">Negative</option>
                   <option value="3">Neutral</option>
@@ -538,7 +581,7 @@
             </div>
             <div class="form-control">
                <label for="locatioin" class="form-label">Location</label>
-               <input class="form-input" type="text" id="location" data-role="none">
+               <input class="form-input" type="text" id="thought-profile-location" data-role="none">
             </div>
          </form>
       </div>

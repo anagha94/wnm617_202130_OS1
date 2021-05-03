@@ -7,23 +7,38 @@ $(()=>{
    .on("pagecontainerbeforeshow", function(event, ui) {
       console.log(ui.toPage[0].id)
 
+      $(".active").removeClass("active");
+
       // PAGE ROUTING
       switch(ui.toPage[0].id) {
          case "main-page": MainPage(); break;
          case "list-page": ListPage(); break;
          case "user-profile-page": UserProfilePage(); break;
          case "thought-profile-page": ThoughtProfilePage(); break;
+         case "thought-edit-page": ThoughtEditPage(); break;
+         case "choose-location-page": ChooseLocationPage(); break;
       }
    })
 
 
-   /* FORM SUBMITS */
+   /* FORM SIGNIN SUBMITS */
    .on("submit","#signin-form",function(e){
       e.preventDefault();
       checkSigninForm();
    })
 
-   /* FORM SUBMITS */
+   .on("submit","#register-form",function(e){
+      e.preventDefault();
+      $.mobile.navigate("#register-second-page");
+   })
+
+    .on("submit","#register-second-form",function(e){
+      e.preventDefault();
+      $.mobile.navigate("#recent-page");
+    })
+
+
+   /* FORM LOGIN SUBMITS */
    .on("submit","#login-form",function(e){
       e.preventDefault();
       checkLoginForm();
